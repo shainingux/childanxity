@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מבינים חרדה יחד - עמוד הסבר לילדים</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif; /* Use Heebo for Hebrew, Inter as fallback */
+            background-color: #f0f9ff; /* Light blue background */
+            direction: rtl; /* Right-to-left for Hebrew */
+            text-align: right; /* Align text to the right */
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem; /* More rounded */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.5rem; /* Larger font size */
+            color: #2563eb; /* Blue header */
+            padding: 0.75rem 0;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            font-size: 1.125rem; /* Larger content font */
+            color: #334155; /* Darker text */
+            padding-top: 0.5rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Adjust as needed for content length */
+            transition: max-height 0.5s ease-in;
+        }
+        .icon {
+            transition: transform 0.3s ease-out;
+        }
+        .accordion-header.active .icon {
+            transform: rotate(90deg);
+        }
+        .button-primary {
+            background-color: #3b82f6; /* Blue button */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 700;
+            transition: background-color 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .button-primary:hover {
+            background-color: #2563eb; /* Darker blue on hover */
+        }
+        .tip-box {
+            background-color: #e0f2fe; /* Lighter blue */
+            border-left: 8px solid #3b82f6; /* Blue border */
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="container mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-700 leading-tight mb-4">
+                <span class="block">מבינים חרדה יחד</span>
+                <span class="block text-2xl sm:text-3xl text-blue-500 font-semibold mt-2">הסבר ידידותי לילדים</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700">
+                שלום, חברים יקרים! בעמוד הזה נלמד על רגש מיוחד שנקרא "חרדה", ואיך אפשר להתמודד איתו.
+            </p>
+        </header>
+
+        <main>
+            <!-- What is Anxiety? -->
+            <div class="card bg-gradient-to-br from-blue-50 to-indigo-50">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4 flex items-center">
+                    <span class="ml-3 text-4xl">🤔</span> מהי חרדה?
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    תארו לכם שיש לכם במוח <strong class="text-blue-800">כלב שמירה נאמן</strong>. תפקידו של הכלב הזה הוא לדאוג שאתם תהיו בטוחים ולשמור עליכם מכל סכנה. הוא נמצא בחלק מיוחד במוח שנקרא <strong class="text-blue-800">אמיגדלה</strong> (שם קצת מסובך, אבל תחשבו עליו כעל הבית של כלב השמירה).
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                    כשכלב השמירה שלנו מזהה משהו שנראה לו מסוכן או מאיים, הוא מפעיל "אזעקה" בכל הגוף! האזעקה הזו גורמת לתגובות לחץ: הלב פועם מהר, הידיים מזיעות, הבטן מתכווצת, ולפעמים גם מגיעות מחשבות מפחידות. כל אלה נועדו להכין אתכם להגן על עצמכם או לברוח מהר. זהו רגש טבעי ולכל אחד יש אותו!
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                    אבל לפעמים, כמו כל כלב שמירה, גם הכלב שלנו יכול לעשות <strong class="text-blue-800">"אזעקות שווא"</strong>. זה אומר שהוא נובח ומפעיל את האזעקה, גם כשאין באמת סכנה. למשל, כשאתם צריכים לדבר מול כל הכיתה, או כשיש לכם מבחן. אזעקת השווא הזו היא בעצם מה שאנחנו קוראים לו "חרדה". זה בסדר גמור כשהיא קורה, כי כלב השמירה שלכם פשוט מנסה להגן עליכם!
+                </p>
+            </div>
+
+            <!-- How does anxiety feel? (Accordion) -->
+            <div class="card bg-gradient-to-br from-purple-50 to-pink-50">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-purple-700 flex items-center">
+                        <span class="ml-3 text-3xl">😟</span> איך מרגישים כשיש חרדה?
+                    </h2>
+                    <span class="icon text-3xl text-purple-500">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-2">
+                        כשהאזעקה הפנימית מצלצלת, אפשר להרגיש כל מיני דברים:
+                    </p>
+                    <ul class="list-disc list-inside text-lg text-gray-700 leading-relaxed pr-4">
+                        <li class="mb-1"><span class="font-semibold text-pink-600">בבטן:</span> תחושה של פרפרים, או שהיא קצת כואבת.</li>
+                        <li class="mb-1"><span class="font-semibold text-pink-600">בגוף:</span> הלב פועם מהר, הידיים מזיעות, או שמרגישים שרוצים לברוח.</li>
+                        <li class="mb-1"><span class="font-semibold text-pink-600">בפנים:</span> כעס, עצב, או פחד גדול.</li>
+                        <li class="mb-1"><span class="font-semibold text-pink-600">במחשבות:</span> קשה להתרכז, או שחושבים רק על מה שמפחיד.</li>
+                    </ul>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                        כל אחד מרגיש חרדה קצת אחרת, וכל התחושות האלה הן נורמליות לגמרי.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Anxiety after scary events -->
+            <div class="card bg-gradient-to-br from-green-50 to-blue-50">
+                <h2 class="text-3xl font-bold text-green-700 mb-4 flex items-center">
+                    <span class="ml-3 text-4xl">🚨</span> חרדה אחרי דברים מפחידים
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    לפעמים, אחרי שקרה משהו גדול ומפחיד, כמו רעידת אדמה, סופה, או משהו קשה שראינו או שמענו עליו, כלב השמירה שלנו עלול להיות יותר דרוך ולהמשיך לצלצל באזעקה חזק יותר מהרגיל. זה קורה כי הגוף והמוח שלנו מנסים להבין מה קרה ולשמור עלינו בטוחים.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                    זה טבעי להרגיש חרדה, עצב, כעס, בלבול, או אפילו לחשוב שוב ושוב על מה שקרה. חשוב לזכור שכל התחושות האלה הן חלק מההתמודדות שלנו, וזה בסדר גמור להרגיש אותן. הן יכולות להיחלש לאט לאט.
+                </p>
+            </div>
+
+            <!-- What can we do when we feel anxious? (Interactive show/hide) -->
+            <div class="card bg-gradient-to-br from-yellow-50 to-orange-50 text-center">
+                <h2 class="text-3xl font-bold text-orange-700 mb-4 flex items-center justify-center">
+                    <span class="ml-3 text-4xl">💡</span> מה אפשר לעשות כשמרגישים חרדה?
+                </h2>
+                <button id="showTipsButton" class="button-primary mx-auto mb-4">
+                    לחצו כאן כדי לגלות!
+                </button>
+                <div id="tipsContent" class="hidden text-right">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        יש כמה דברים שיכולים לעזור לנו כשהאזעקה הפנימית מצלצלת חזק:
+                    </p>
+
+                    <div class="tip-box mb-3">
+                        <strong class="text-blue-900">1. לדבר על זה:</strong> ספרו להורים, למורה, או למבוגר שאתם סומכים עליו איך אתם מרגישים. לפעמים רק לדבר על זה כבר עוזר.
+                    </div>
+                    <div class="tip-box mb-3">
+                        <strong class="text-blue-900">2. לנשום עמוק:</strong> קחו נשימות איטיות וגדולות. תדמיינו שאתם מריחים פרח (נשימה פנימה דרך האף) ואז נושפים נר (נשיפה איטית דרך הפה). חזרו על זה כמה פעמים.
+                    </div>
+                    <div class="tip-box mb-3">
+                        <strong class="text-blue-900">3. לעשות משהו שאוהבים:</strong> לשחק, לצייר, לקרוא ספר, או לראות סרטון מצחיק. לעשות משהו שכיף לכם יכול לעזור להסיט את המחשבות.
+                    </div>
+                    <div class="tip-box mb-3">
+                        <strong class="text-blue-900">4. לזוז קצת:</strong> לצאת לטיול קצר, לקפוץ, או לעשות כמה מתיחות. תנועה עוזרת לגוף להוציא אנרגיה של חרדה.
+                    </div>
+                    <div class="tip-box mb-3">
+                        <strong class="text-blue-900">5. דיבור פנימי מטיב:</strong> תזכרו לעצמכם מילים טובות ומעודדות, כמו "אני יכול/ה לעשות את זה", או "אני בטוח/ה עכשיו". נסו להיות חברים של כלב השמירה שלכם.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remember you're not alone! -->
+            <div class="card bg-gradient-to-br from-red-50 to-purple-50">
+                <h2 class="text-3xl font-bold text-red-700 mb-4 flex items-center">
+                    <span class="ml-3 text-4xl">💖</span> זכרו שאתם לא לבד!
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    זה בסדר גמור להרגיש חרדה, וחשוב לזכור שאתם לא לבד בתחושות האלה. יש הרבה ילדים ומבוגרים שמרגישים חרדה לפעמים, ויש גם הרבה דרכים לעזור לעצמנו ולהרגיש טוב יותר.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mt-2">
+                    אם אתם ממשיכים להרגיש חרדה חזקה, או אם קשה לכם להתמודד לבד, אל תהססו לבקש עזרה ממבוגר שאתם סומכים עליו. אנחנו כאן בשבילכם!
+                </p>
+            </div>
+        </main>
+
+        <footer class="text-center mt-8 text-gray-500 text-sm">
+            <p>נוצר באהבה ע"י שני סער, פסיכולוגית חינוכית מומחית, מנחה ליוגה ומיינדפולנס למבוגרים, נוער וילדים.</p>
+            &copy; 2025 כל הזכויות שמורות.
+        </footer>
+    </div>
+
+    <script>
+        // Accordion functionality
+        function toggleAccordion(header) {
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                content.style.maxHeight = null;
+            } else {
+                content.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + "px"; // Set max-height to content height
+            }
+        }
+
+        // Show/Hide tips functionality
+        document.getElementById('showTipsButton').addEventListener('click', function() {
+            const tipsContent = document.getElementById('tipsContent');
+            if (tipsContent.classList.contains('hidden')) {
+                tipsContent.classList.remove('hidden');
+                tipsContent.style.maxHeight = tipsContent.scrollHeight + "px"; // Expand to content height
+                this.textContent = 'הסתירו את הטיפים';
+            } else {
+                tipsContent.classList.add('hidden');
+                tipsContent.style.maxHeight = null; // Collapse
+                this.textContent = 'לחצו כאן כדי לגלות!';
+            }
+        });
+    </script>
+</body>
+</html>
